@@ -1,13 +1,11 @@
 const express = require('express');
+const calculateCount = require('./1_promise');
 
 const PORT = process.env.PORT || 4001;
 const app = express();
 
-app.get('/blocking', (req, res) => {
-    let counter = 0;
-    for (let i = 1; i < 20000000000; ++i) {
-        counter++;
-    }
+app.get('/blocking', async(req, res) => {
+    const counter = await calculateCount();
     res.send(`Counter is ${counter}`);
 })
 
