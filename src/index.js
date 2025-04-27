@@ -4,12 +4,17 @@ const fs = require('fs');
 
 const PORT = process.env.PORT || 4001;
 const app = express();
-const filePath = path.join(__dirname, 'my-file-read.txt');
-const readable = fs.createReadStream(filePath, {highWaterMark: 20})
+// const filePath = path.join(__dirname, 'my-file-read.txt');
+// const readable = fs.createReadStream(filePath, {highWaterMark: 20})
 
-readable.on("data", (chunck) => {
-    console.log("New chuck: ", chunck.toString());
-})
+// readable.on("data", (chunck) => {
+//     console.log("New chuck: ", chunck.toString());
+// })
+
+const filePath = path.join(__dirname, 'my-file-write.txt');
+const writable = fs.createWriteStream(filePath);
+writable.write("Hello World");
+writable.end("!");
 
 app.listen(PORT, () => {
     console.log(`Server started at ${PORT}`);
