@@ -15,6 +15,7 @@ https://www.youtube.com/playlist?list=PL5Lsd0YA4OMGN86vWiW7O52izu-cTxcS3
 | `cluster_demo` | [DigitalOcean: How To Scale Node.js Applications with Clustering](https://www.digitalocean.com/community/tutorials/how-to-scale-node-js-applications-with-clustering) | Demonstrates how to use Node.js's `cluster` module to fork child processes |
 | `project_structure` | [Youtube: Node.js Project Structure and Architecture Best Practices](https://www.youtube.com/watch?v=fc6o1gwqZuA&list=PL5Lsd0YA4OMGN86vWiW7O52izu-cTxcS3&index=3) | Demonstrate how to structure nodejs project and best practices using 3 layer architecture |
 | `streams` | [How to use "Streams" to improve performance in Node.js?](https://www.youtube.com/watch?v=VSBq9Q7QrGk&list=PL5Lsd0YA4OMGN86vWiW7O52izu-cTxcS3&index=9) | Demonstrate different types of streams |
+| `nodejs_eventloop` | [Youtube: How does event loop works in nodejs?](https://www.youtube.com/watch?v=L18RHG2DwwA) | Demonstrate how nodejs eventloop works |
 
 
 ## 🧪 How to Use
