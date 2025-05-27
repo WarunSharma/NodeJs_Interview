@@ -16,6 +16,7 @@ https://www.youtube.com/playlist?list=PL5Lsd0YA4OMGN86vWiW7O52izu-cTxcS3
 | `project_structure` | [Youtube: Node.js Project Structure and Architecture Best Practices](https://www.youtube.com/watch?v=fc6o1gwqZuA&list=PL5Lsd0YA4OMGN86vWiW7O52izu-cTxcS3&index=3) | Demonstrate how to structure nodejs project and best practices using 3 layer architecture |
 | `streams` | [How to use "Streams" to improve performance in Node.js?](https://www.youtube.com/watch?v=VSBq9Q7QrGk&list=PL5Lsd0YA4OMGN86vWiW7O52izu-cTxcS3&index=9) | Demonstrate different types of streams |
 | `nodejs_eventloop` | [Youtube: How does event loop works in nodejs?](https://www.youtube.com/watch?v=L18RHG2DwwA) | Demonstrate how nodejs eventloop works |
+| `nodejs_child_process` | [All you need to know about "child_process" in Node.js](http://youtube.com/watch?v=C1v4MXGhpcM&list=PL5Lsd0YA4OMGN86vWiW7O52izu-cTxcS3&index=11) | Demonstrate how nodejs child_process works |
 
 
 ## 🧪 How to Use
