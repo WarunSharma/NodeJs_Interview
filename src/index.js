@@ -3,41 +3,54 @@ const express = require("express");
 const PORT = process.env.PORT || 4001;
 const app = express();
 
-console.log("🔵 Start of the script (sync)");
+console.log('Start');
 
-process.nextTick(() => {
-  console.log("🟢 Inside process.nextTick");
-});
-
-Promise.resolve()
-  .then(() => {
-    console.log("🟡 Inside Promise.then 1");
-    return Promise.resolve();
-  })
-  .then(() => {
-    console.log("🟡 Inside Promise.then 2");
-  });
-
-async function asyncFunction() {
-  console.log("🟣 Inside asyncFunction (start)");
-  await Promise.resolve();
-  console.log("🟣 Inside asyncFunction (after await)");
-}
-asyncFunction();
-
+// Timer API (macro-task)
 setTimeout(() => {
-  console.log("🟠 Inside setTimeout 0ms");
+  console.log('setTimeout');
 }, 0);
 
-setInterval(() => {
-  console.log("🔴 Inside setInterval 0ms");
-}, 0);
+// Timer with longer delay
+setTimeout(() => {
+  console.log('setTimeout 100ms');
+}, 100);
 
+// Immediate callback (macrotask but runs after I/O)
 setImmediate(() => {
-  console.log("🟤 Inside setImmediate");
+  console.log('setImmediate');
 });
 
-console.log("🔵 End of the script (sync)");
+// nextTick (micro-task, highest priority)
+process.nextTick(() => {
+  console.log('process.nextTick');
+});
+
+// Promise (micro-task)
+Promise.resolve().then(() => {
+  console.log('Promise.then');
+});
+
+// Async function (micro-task)
+(async function() {
+  console.log('Async function start');
+  await Promise.resolve();
+  console.log('Async function after await');
+})();
+
+// Simulate I/O task (like reading a file)
+const fs = require('fs');
+fs.readFile(__filename, () => {
+  console.log('fs.readFile (I/O)');
+});
+
+// Fetch-like simulation using setTimeout (mimics Web API behavior)
+setTimeout(() => {
+  Promise.resolve().then(() => {
+    console.log('Promise inside setTimeout');
+  });
+}, 0);
+
+console.log('End');
 
 app.listen(PORT, () => {
   console.log(`Server started at ${PORT}`);
